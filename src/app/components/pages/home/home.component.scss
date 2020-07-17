@@ -1,0 +1,15 @@
+.container{
+margin-top: 25px;
+display: grid;
+grid-template-columns: 20% 20% 20% 20% ;
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+justify-content: center;
+
+a{
+    cursor: pointer;
+    color:black;
+    text-decoration: none;
+}
+
+}

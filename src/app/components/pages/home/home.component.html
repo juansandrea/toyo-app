@@ -1,0 +1,47 @@
+   <h1>Descubrí todos los modelos </h1>
+   <mat-form-field>
+       <mat-label>filtro</mat-label>
+       <mat-select [(value)]="selectedValue">
+           <mat-option value="segmentPost">Autos</mat-option>
+           <mat-option value="yearPost">Año</mat-option>
+       </mat-select>
+       {{selectedValue}}
+      
+       
+   </mat-form-field>
+
+<div class="container">
+<mat-card class="post-card" *ngFor="let post of posts">
+    <mat-card-header>
+        <mat-card-title>
+            <a [routerLink]="['/post',post.id]">
+                {{ post.titlePost }}
+                
+
+            </a>
+            </mat-card-title>
+            
+    </mat-card-header>
+    <mat-card-header>
+        <mat-card-content>
+            <p>
+            {{ post.yearPost }} |
+            {{ post.pricePost }}
+            </p>
+        
+           
+           
+        </mat-card-content>
+    </mat-card-header>
+    <img matCardImage [src]="post.imagePost">
+    <mat-card-content>
+        <p>
+            {{ post.contentPost }}
+        </p>
+    </mat-card-content>
+    
+
+</mat-card>>
+
+    
+</div>
